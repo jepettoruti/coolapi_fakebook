@@ -39,3 +39,183 @@ Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.0ms)
 
 Authenticating user JoseP, status 200.
 OTHER Error creating payment of ARS 10000 to broken_recipient: 
+Started GET "/" for 127.0.0.1 at 2018-08-29 23:14:50 +0100
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/coco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/coco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 75ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipients" for 127.0.0.1 at 2018-08-29 23:15:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/recipients"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/recipients/add" for 127.0.0.1 at 2018-08-29 23:15:09 +0100
+Processing by RecipientsController#add as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/recipients/add" for 127.0.0.1 at 2018-08-29 23:15:13 +0100
+Processing by RecipientsController#add as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/recipients/add" for 127.0.0.1 at 2018-08-29 23:16:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/recipients/add"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients/add" for 127.0.0.1 at 2018-08-29 23:16:27 +0100
+Processing by RecipientsController#add as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients/add" for 127.0.0.1 at 2018-08-29 23:28:16 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/recipients/add"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:28:22 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 200 OK in 258ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:29:23 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 500 Internal Server Error in 541ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:29:51 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 422 Unprocessable Entity in 190ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:30:21 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name:coco1"=>nil}
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 422 Unprocessable Entity in 174ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:30:33 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"coco1"}
+Authenticating user JoseP, status 200.
+Created recipient coco1: 750a5fd1-962b-4690-97d3-dfe1dbf636ca
+Completed 200 OK in 181ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:33:14 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"coco1"}
+Authenticating user JoseP, status 200.
+Created recipient coco1: dd4c9239-d09d-468f-a069-1c7809c30f60
+Completed 200 OK in 423ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:33:17 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>""}
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 500 Internal Server Error in 170ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/recipients_controller.rb:13:in `add'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:33:50 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>""}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:33:54 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>""}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:33:57 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 433  in 179ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-29 23:35:28 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 422 Unprocessable Entity in 275ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
