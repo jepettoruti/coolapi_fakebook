@@ -24,6 +24,10 @@ At the moment this app is not connecting to any DB.
 
 I use Rspec for tests.
 
+An important assumption is that there is a single Coolpay API key, which is going to be used by our service to connect to Coolpay. If multiple users use our service, then authentication and validation of users need to happen on our side, not by using many Coolpay keys.
+
+At the moment, the app is just a basic wrapper around the Coolpay API, but it's intended to be a foundation for adding more features.
+
 ## Configuration
 The app uses environment variables to receive configuration parameters such as secrets.
 The following settings are required, and can be passed as ENV or using a dotenv file.
