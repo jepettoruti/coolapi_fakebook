@@ -24,11 +24,21 @@ At the moment this app is not connecting to any DB.
 
 I use Rspec for tests.
 
-## Setup
+## Configuration
+The app uses environment variables to receive configuration parameters such as secrets.
+The following settings are required, and can be passed as ENV or using a dotenv file.
+
+```
+COOLPAY_USERNAME=<Your Coolpay Username>
+COOLPAY_API_KEY=<Your Coolpay API Key>
+```
+
+## Development setup
 I used Ruby version 2.5.1 as it is the latest stable.
 It doesn't require any particular system dependencies apart from a working Ruby environment with Bundler.
 
-Just clone and `bundle install`.
+1. Add environment variables as described in the Configuration section.
+2. Just clone and `bundle install`.
 
 ## Running Tests
 ```
