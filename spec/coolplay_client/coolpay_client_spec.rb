@@ -40,34 +40,56 @@ RSpec.describe CoolpayClient, :type => :model do
       end
     end
 
-
-    # The API usually gives 200s to any names, testing with empty name
+    # The API usually gives 201s to any names, testing with empty name
     context 'with empty name' do
       it 'should fail' do
         recipient_id = @client.add_recipient('')
         expect(recipient_id).to be_nil
       end
     end
+  end
+
+  describe 'payment creation' do
+    context 'recipient exists' do
+      it 'should create a payment' do
+        recipient_id = @client.add_recipient('Johnny')
+        payment_id = @client.create_payment(20, 'GBP', recipient_id)
+        expect(payment_id).to be_truthy
+      end
+    end
+
+    context 'recipient does not exist' do
+      it 'should fail payment creation' do
+        payment_id = @client.create_payment(10000, 'ARS', 'aed01bf1-a3d8-402e-937d-c2a96f56f65a')
+        expect(payment_id).to be_nil
+      end
+    end
+
+    context 'recipient_id is invalid' do
+      it 'should fail payment creation' do
+        payment_id = @client.create_payment(99, 'AED', 'broken_recipient')
+        expect(payment_id).to be_nil
+      end
+    end
+
+    context 'recipient exists' do
+      it 'should create a payment' do
+        recipient_id = @client.add_recipient('Johnny')
+        payment_id = @client.create_payment(30, 'EUR', recipient_id)
+        payment=@client.get_payment(payment_id)
+        aggregate_failures "and payment is actually there" do
+            expect(payment).to be_truthy
+            expect(payment['recipient_id']).to eq recipient_id
+            expect(payment['id']).to eq payment_id
+            expect(payment['currency']).to eq 'EUR'
+            expect(payment['amount']).to eq "30"
+        end
+      end
+    end
+
+    # Not testing the check_payment method as not all payments actually work
 
   end
 
 end
 
-
-
-# describe Credentials do
-#   let(:default) { {'username': ENV['USERNAME'], 'apikey': ENV['API_KEY'] } }
-#   let(:other)  { {"username": "your_username", "apikey": "5up3r$ecretKey!"} }
-#   # subject(:credentials) { described_class.new }
-
-#   describe('#format_json') do
-#     it('formats the default credentials into json format') do
-#       expect(credentials.format_json).to eq default
-#     end
-
-#     it('formats the given credentials into json format') do
-#       cr = described_class.new(username: "your_username", apikey: "5up3r$ecretKey!")
-#       expect(cr.format_json).to eq other
-#     end
-#   end
-# end

@@ -13,8 +13,12 @@ class CoolpayClient
            }.to_json
 
     response = self.class.post("/login", { body: body } )
+
+    Rails.logger.info "Authenticating user #{username}, status #{response.code}."
+
     response.parsed_response['token']
   end
+
 
   # Adds a new recipient into Coolpay, returns the recipient ID
   def add_recipient(recipient_name)
@@ -23,12 +27,21 @@ class CoolpayClient
                                                 body: body, 
                                                 headers: authorization_header
                                               } )
-    response.code == 201 ? response.parsed_response['recipient']['id'] : nil
+  
+    recipient_id = response.code == 201 ? response.parsed_response['recipient']['id'] : nil
+    if response.code == 201
+      Rails.logger.info "Created recipient #{recipient_name}: #{response.parsed_response['recipient']['id'] }"
+      response.parsed_response['recipient']['id']
+    else
+      Rails.logger.info "Failed creating recipient #{recipient_name}"
+      nil
+    end
   end
 
-  # Sends <currency><amount> money to the recipient identified by ID, returns the newly 
+
+  # Sends <currency><amount> to the recipient identified by ID, returns the newly 
   # created payment ID
-  def send_money(amount, currency, recipient_id)
+  def create_payment(amount, currency, recipient_id)
     body = { payment: { 
                           amount:  amount,
                           currency: currency,
@@ -40,29 +53,43 @@ class CoolpayClient
                                                 body: body, 
                                                 headers: authorization_header
                                               } )
-    response.parsed_response['payment']
+    # TODO: Improve responses over 422 statuses
+    if response.code == 201
+      Rails.logger.info "Created payment of #{currency} #{amount} to #{recipient_id}: #{response.parsed_response['payment']['id']}"
+      response.parsed_response['payment']['id']
+    elsif response.code == 422
+      Rails.logger.info "Error creating payment of #{currency} #{amount} to #{recipient_id}: #{response.parsed_response['errors'].to_s}"
+      nil
+    else
+      Rails.logger.info "Other error creating payment of #{currency} #{amount} to #{recipient_id}: #{response.code} #{response.body} }"
+      nil
+    end
   end
+
 
   # Gets all details about a payment
   def get_payment(payment_id)
     payments = get_payments
     payment_index = payments.index { |x| x['id'] == payment_id }
-    payments[payment_index]
+    payment_index.nil? ? nil : payments[payment_index]
   end
+
 
   # Checks if the payment status is 'paid'
   def payment_successful?(payment_id)
     payment = get_payment(payment_id)
-    payment['status']=='paid'
+    payment.nil? ? false : payment['status']=='paid'
   end
 
   private
+
 
   # Generates the authorization header used in other functions
   def authorization_header
     token = self.authenticate(ENV['COOLPAY_USERNAME'],ENV['COOLPAY_API_KEY'])
     { :authorization => "Bearer #{token}" }
   end
+
 
   # Gets all payments from Coolpay, can potentially be a huge list
   def get_payments

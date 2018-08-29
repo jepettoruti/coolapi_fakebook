@@ -37,3 +37,5 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.0ms)
 
 
+Authenticating user JoseP, status 200.
+OTHER Error creating payment of ARS 10000 to broken_recipient: 
