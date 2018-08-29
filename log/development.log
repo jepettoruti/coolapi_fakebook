@@ -219,3 +219,442 @@ Failed creating recipient
 Completed 422 Unprocessable Entity in 275ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:40:20 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 422 Unprocessable Entity in 252ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:40:34 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Juan"}
+Authenticating user JoseP, status 200.
+Created recipient Juan: cb3dea73-43fe-467e-9832-6edd566528a3
+Completed 200 OK in 174ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:41:19 +0100
+Processing by RecipientsController#add as JSON
+Authenticating user JoseP, status 200.
+Failed creating recipient 
+Completed 422 Unprocessable Entity in 176ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:41:27 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryD8ffWcY0v0RSzmF7
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundaryD8ffWcY0v0RSzmF7--
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '------WebKitFormBoundaryD8ffWcY0v0RSzmF7
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundaryD8ffWcY0v0RSzmF7--
+'):
+  
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:41:30 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryug8QebfB6H84k9Qd
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundaryug8QebfB6H84k9Qd--
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '------WebKitFormBoundaryug8QebfB6H84k9Qd
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundaryug8QebfB6H84k9Qd--
+'):
+  
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:41:31 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundary1jwKQr6lpAvVBPAw
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundary1jwKQr6lpAvVBPAw--
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '------WebKitFormBoundary1jwKQr6lpAvVBPAw
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundary1jwKQr6lpAvVBPAw--
+'):
+  
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:42:14 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundary7lMd5Bjsfhybmczk
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundary7lMd5Bjsfhybmczk--
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '------WebKitFormBoundary7lMd5Bjsfhybmczk
+Content-Disposition: form-data; name="name"
+
+Juan
+------WebKitFormBoundary7lMd5Bjsfhybmczk--
+'):
+  
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:42:17 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Juan"}
+Authenticating user JoseP, status 200.
+Created recipient Juan: e37dd0b8-0cbb-4d4d-93dd-acdd04d2c0e1
+Completed 200 OK in 195ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:42:30 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Juan"}
+Authenticating user JoseP, status 200.
+Created recipient Juan: e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27
+Completed 200 OK in 565ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/payments" for 127.0.0.1 at 2018-08-30 00:44:10 +0100
+Processing by PaymentsController#create as JSON
+  Parameters: {"amount"=>"30", "currency"=>"GBP", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27"}
+Authenticating user JoseP, status 200.
+Created payment of GBP 30 to e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27: 662507db-2bdc-4ab1-8e95-df4d58af12b4
+Completed 200 OK in 425ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=662507db-2bdc-4ab1-8e95-df4d58af12b4" for 127.0.0.1 at 2018-08-30 00:45:05 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4"}
+Authenticating user JoseP, status 200.
+{"status"=>"failed", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27", "id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4", "currency"=>"GBP", "amount"=>"30"}
+Completed 200 OK in 203ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=662507db-2bdc-4ab1-8e95-df4d58af12b4" for 127.0.0.1 at 2018-08-30 00:45:07 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4"}
+Authenticating user JoseP, status 200.
+{"status"=>"failed", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27", "id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4", "currency"=>"GBP", "amount"=>"30"}
+Completed 200 OK in 203ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=662507db-2bdc-4ab1-8e95-df4d58af12b4" for 127.0.0.1 at 2018-08-30 00:45:08 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4"}
+Authenticating user JoseP, status 200.
+{"status"=>"failed", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27", "id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4", "currency"=>"GBP", "amount"=>"30"}
+Completed 200 OK in 194ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=662507db-2bdc-4ab1-8e95-df4d58af12b" for 127.0.0.1 at 2018-08-30 00:45:14 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b"}
+Authenticating user JoseP, status 200.
+
+Completed 404 Not Found in 212ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=662507db-2bdc-4ab1-8e95-df4d58af12b4" for 127.0.0.1 at 2018-08-30 00:45:17 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4"}
+Authenticating user JoseP, status 200.
+{"status"=>"failed", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27", "id"=>"662507db-2bdc-4ab1-8e95-df4d58af12b4", "currency"=>"GBP", "amount"=>"30"}
+Completed 200 OK in 207ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/payments" for 127.0.0.1 at 2018-08-30 00:45:20 +0100
+Processing by PaymentsController#create as JSON
+  Parameters: {"amount"=>"30", "currency"=>"GBP", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27"}
+Authenticating user JoseP, status 200.
+Created payment of GBP 30 to e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27: afad910b-697f-4d05-bf7a-ad6d2f4ef4e4
+Completed 200 OK in 176ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=afad910b-697f-4d05-bf7a-ad6d2f4ef4e4" for 127.0.0.1 at 2018-08-30 00:45:30 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"afad910b-697f-4d05-bf7a-ad6d2f4ef4e4"}
+Authenticating user JoseP, status 200.
+{"status"=>"paid", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27", "id"=>"afad910b-697f-4d05-bf7a-ad6d2f4ef4e4", "currency"=>"GBP", "amount"=>"30"}
+Completed 200 OK in 218ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-08-30 00:48:33 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:48:33 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Johnny"}
+Authenticating user JoseP, status 200.
+Created recipient Johnny: ca063fb6-d0a3-48d2-8a22-9a5c17c84655
+Completed 200 OK in 254ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:48:35 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Johnny"}
+Authenticating user JoseP, status 200.
+Created recipient Johnny: a737e0be-b478-44fb-a3ca-aa13a6a6ab59
+Completed 200 OK in 177ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:48:37 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Johnny"}
+Authenticating user JoseP, status 200.
+Created recipient Johnny: 5684306e-9972-4864-9803-63d0e5f558ce
+Completed 200 OK in 193ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipients" for 127.0.0.1 at 2018-08-30 00:49:42 +0100
+Processing by RecipientsController#add as JSON
+  Parameters: {"name"=>"Johnny"}
+Authenticating user JoseP, status 200.
+Created recipient Johnny: ef7d1d7b-554b-497b-9c72-093501eec2d5
+Completed 200 OK in 172ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/payments" for 127.0.0.1 at 2018-08-30 00:49:47 +0100
+Processing by PaymentsController#create as JSON
+  Parameters: {"amount"=>"30", "currency"=>"GBP", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27"}
+Authenticating user JoseP, status 200.
+Created payment of GBP 30 to e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27: 263d190c-24d9-45f0-b87f-e548d929b960
+Completed 200 OK in 178ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/payments/status/?payment_id=afad910b-697f-4d05-bf7a-ad6d2f4ef4e4" for 127.0.0.1 at 2018-08-30 00:50:31 +0100
+Processing by PaymentsController#status as JSON
+  Parameters: {"payment_id"=>"afad910b-697f-4d05-bf7a-ad6d2f4ef4e4"}
+Authenticating user JoseP, status 200.
+{"status"=>"paid", "recipient_id"=>"e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27", "id"=>"afad910b-697f-4d05-bf7a-ad6d2f4ef4e4", "currency"=>"GBP", "amount"=>"30"}
+Completed 200 OK in 210ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+

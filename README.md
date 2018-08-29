@@ -53,7 +53,36 @@ bundle exec rspec
 ```
 
 ## Usage
-TODO
+1. Download dependencies with `bundle`
+2. Start the rails server with `bundle exec rails s`
+3. In another terminal, you can run the calls using cURL:
+
+### Create Recipient
+```
+curl -X POST \
+  http://localhost:3000/recipients \
+  -F name=Johnny
+
+{"status":"SUCCESS","recipient_id":"5684306e-9972-4864-9803-63d0e5f558ce"}
+```
+
+### Create Payment
+```
+curl -X POST \
+  http://localhost:3000/payments \
+  -F amount=30 \
+  -F currency=GBP \
+  -F recipient_id=e4dbd5cc-bcc7-4b6d-9312-30513e9b5b27
+
+{"status":"SUCCESS","payment_id":"263d190c-24d9-45f0-b87f-e548d929b960"}
+```
+
+### Check Status of Payment
+```
+curl -X GET 'http://localhost:3000/payments/status/?payment_id=afad910b-697f-4d05-bf7a-ad6d2f4ef4e4' 
+
+{"payment_status":"paid"}
+```
 
 ## Deployment
 TODO
