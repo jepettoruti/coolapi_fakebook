@@ -41,6 +41,9 @@ It doesn't require any particular system dependencies apart from a working Ruby 
 2. Just clone and `bundle install`.
 
 ## Running Tests
+CircleCI is configured to run tests on CI. 
+
+You can also run your tests locally:
 ```
 bundle exec rspec
 ```
