@@ -31,7 +31,9 @@ It doesn't require any particular system dependencies apart from a working Ruby 
 Just clone and `bundle install`.
 
 ## Running Tests
-TODO
+```
+bundle exec rspec
+```
 
 ## Usage
 TODO
