@@ -7,9 +7,9 @@ class CoolpayClient
   headers 'Content-Type' => 'application/json'
 
   # Authenrticates agains Coolpay and returns an auth token
-  def authenticate
-    body = { username: ENV['COOLPAY_USERNAME'],
-             apikey: ENV['COOLPAY_API_KEY'] 
+  def authenticate(username=ENV['COOLPAY_USERNAME'], apikey=ENV['COOLPAY_API_KEY'])
+    body = { username: username,
+             apikey: apikey
            }.to_json
 
     response = self.class.post("/login", { body: body } )
@@ -23,7 +23,7 @@ class CoolpayClient
                                                 body: body, 
                                                 headers: authorization_header
                                               } )
-    response.parsed_response['recipient']['id']
+    response.code == 201 ? response.parsed_response['recipient']['id'] : nil
   end
 
   # Sends <currency><amount> money to the recipient identified by ID, returns the newly 
@@ -60,7 +60,7 @@ class CoolpayClient
 
   # Generates the authorization header used in other functions
   def authorization_header
-    token = self.authenticate
+    token = self.authenticate(ENV['COOLPAY_USERNAME'],ENV['COOLPAY_API_KEY'])
     { :authorization => "Bearer #{token}" }
   end
 
