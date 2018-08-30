@@ -1,6 +1,7 @@
 # Fakebook / Coolpay
 This little app integrates with the [Coolpay API](http://docs.coolpayapi.apiary.io/) in order to allow sending money to users.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/10452ee0e12c4180926030bc56c9260d)](https://app.codacy.com/app/jepettoruti/coolapi_fakebook?utm_source=github.com&utm_medium=referral&utm_content=jepettoruti/coolapi_fakebook&utm_campaign=Badge_Grade_Dashboard)
 [![CircleCI](https://circleci.com/gh/jepettoruti/coolapi_fakebook.svg?style=svg)](https://circleci.com/gh/jepettoruti/coolapi_fakebook)
 
 ## Scenario
