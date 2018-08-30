@@ -108,6 +108,7 @@ docker run --env PORT=3000 --env COOLPAY_USERNAME=<USERNAME> --env COOLPAY_API_K
 I believe this service provides the very basic MVP required by the scenario.
 Not ready for production, but here are some ideas that may be considered in the future:
 
+- Add VCR into specs so no APIs calls need to be made every time it builds
 - Improve input validation on both the service and the API client
 - Improve management of edge cases and errors on the client (and service)
 - Add authentication on the app side, so multiple users can create payments by being authorised to do so.
