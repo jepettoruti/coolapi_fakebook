@@ -8,15 +8,15 @@ class PaymentsController < ApplicationController
 
     if (params[:amount].to_f > 0 && accepted_currencies.include?(params[:currency]) && params[:recipient_id])
       payment_id = client.create_payment(params[:amount], params[:currency], params[:recipient_id])
-      
+
       if payment_id.nil?
-          render json: {status: 'ERROR'}, status: 404
+        render json: { status: 'ERROR' }, status: 404
       else
-          render json: {status: 'SUCCESS', payment_id: payment_id}, status: :ok
+        render json: { status: 'SUCCESS', payment_id: payment_id }, status: :ok
       end
-    
+
     else
-      render json: {status: 'ERROR'}, status: 422
+      render json: { status: 'ERROR' }, status: 422
     end
   end
 
@@ -26,13 +26,12 @@ class PaymentsController < ApplicationController
       payment = client.get_payment(params[:payment_id])
       Rails.logger.info payment
       if payment.nil?
-          render json: {status: 'ERROR'}, status: 404
+        render json: { status: 'ERROR' }, status: 404
       else
-          render json: {payment_status: payment['status']}, status: :ok
+        render json: { payment_status: payment['status'] }, status: :ok
       end
     else
-      render json: {status: 'ERROR'}, status: 422
+      render json: { status: 'ERROR' }, status: 422
     end
   end
 end
-

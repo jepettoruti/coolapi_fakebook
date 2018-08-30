@@ -34,6 +34,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'dotenv-rails'
   gem 'rspec_junit_formatter'
+  # gem 'rubocop', require: false
+  gem 'rubocop-rails'
 end
 
 group :development do
