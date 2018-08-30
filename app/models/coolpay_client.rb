@@ -64,14 +64,11 @@ class CoolpayClient
     end
   end
 
-
   # Gets all details about a payment
   def get_payment(payment_id)
     payments = get_payments
-    payment_index = payments.index { |x| x['id'] == payment_id }
-    payment_index.nil? ? nil : payments[payment_index]
+    payments.select { |payment| payment['id'] == payment_id }.first
   end
-
 
   # Checks if the payment status is 'paid'
   def payment_successful?(payment_id)
