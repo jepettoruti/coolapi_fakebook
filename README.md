@@ -117,3 +117,4 @@ Not ready for production, but here are some ideas that may be considered in the 
 - Add some sort of fraud protection and anti money-laundering capabilities
 - Add better logging and instrumentation on different parts of the code to have better observability in production
 - Improve (create) puma configuration to better adapt to infrastructure setup
+- Provide an OpenAPI (Swagger) specification for the service so other users/systems can have a clear view on how to interact with this service
