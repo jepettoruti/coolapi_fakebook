@@ -47,10 +47,9 @@ COOLPAY_API_URL=https://coolpay.herokuapp.com/api
 I used Ruby version 2.5.1 as it is the latest stable.
 It doesn't require any particular system dependencies apart from a working Ruby environment with Bundler.
 
-1. Add environment variables as described in the Configuration section.
+1. Add environment variables (or `.env` file) as described in the [Configuration](https://github.com/jepettoruti/coolapi_fakebook#configuration) section.
 2. Just clone and `bundle install`.
-3. Add your `.env` file using the format from previous section.
-4. Start your server.
+3. Start your server.
 
 For improvements, please create a PR on the repository and hopefully it can be merged soon.
 
