@@ -56,6 +56,7 @@ For improvements, please create a PR on the repository and hopefully it can be m
 
 ## Running Tests
 CircleCI is configured to run tests on CI. 
+Also Codacy is used to provide static code analysis.
 
 You can also run your tests locally:
 ```
@@ -120,3 +121,5 @@ Not ready for production, but here are some ideas that may be considered in the 
 - Add better logging and instrumentation on different parts of the code to have better observability in production
 - Improve (create) puma configuration to better adapt to infrastructure setup
 - Provide an OpenAPI (Swagger) specification for the service so other users/systems can have a clear view on how to interact with this service
+- Add integration to an Exception Management service like Sentry.
+- Send custom performance metrics to monitoring.
