@@ -126,3 +126,5 @@ Not ready for production, but here are some ideas that may be considered in the 
 - Add integration to an Exception Management service like Sentry.
 - Send custom performance metrics to monitoring.
 - Refactor client file and split to some files.
+- Add caching for exposed APIs.
+- Ask Coolpay to implement a proper search of payments. Using a call that provides _ALL_ payments is definitely slow and not very scalable.
