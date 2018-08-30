@@ -24,11 +24,13 @@ It could be argued that the initial scenario didn't require this and could have 
 
 At the moment this app is not connecting to any DB (other than an empty sqlite provided by rails).
 
-I use Rspec for tests.
+Rspec was used for tests.
 
 An important assumption is that there is a single Coolpay API key, which is going to be used by our service to connect to Coolpay. If multiple users use our service, then authentication and validation of users need to happen on our side, not by using many Coolpay keys.
 
 At the moment, the app is just a basic wrapper around the Coolpay API, but it's intended to be a foundation for adding more features.
+
+There is a Coolpay API client which uses HTTParty. There are many HTTP client implementations, probably worth having a discussion with the team around which one to use for consistency. 
 
 ## Configuration
 The app uses environment variables to receive configuration parameters such as secrets.
@@ -106,6 +108,8 @@ docker run --env PORT=3000 --env COOLPAY_USERNAME=<USERNAME> --env COOLPAY_API_K
 I believe this service provides the very basic MVP required by the scenario.
 Not ready for production, but here are some ideas that may be considered in the future:
 
+- Improve input validation on both the service and the API client
+- Improve management of edge cases and errors on the client (and service)
 - Add authentication on the app side, so multiple users can create payments by being authorised to do so.
 - Add a DB in order to store transactions and provide methods to access those
 - Process payments in background (if Coolpay is slow, or dead temporarily, also the ability to retry)
