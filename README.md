@@ -35,6 +35,7 @@ The following settings are required, and can be passed as ENV or using a dotenv 
 ```
 COOLPAY_USERNAME=<Your Coolpay Username>
 COOLPAY_API_KEY=<Your Coolpay API Key>
+COOLPAY_API_URL=https://coolpay.herokuapp.com/api
 ```
 
 ## Development setup
