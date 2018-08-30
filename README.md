@@ -95,6 +95,8 @@ curl -X GET 'http://localhost:3000/payments/status/?payment_id=afad910b-697f-4d0
 {"payment_status":"paid"}
 ```
 
+**Note:** There is no call or API exposed for authentication at the moment from the app. The authentication with Coolpay happens automatically on each call. As discussed in [Next Steps](https://github.com/jepettoruti/coolapi_fakebook#next-steps), an user authentication system needs to be implemented.
+
 ## Deployment
 Of course this service needs a security audit, configure logs and proper monitoring before deployment.
 That being said, I added a basic Procfile and Dockerfile which can be used as a good starting point for deploying this app.
@@ -110,10 +112,10 @@ docker run --env PORT=3000 --env COOLPAY_USERNAME=<USERNAME> --env COOLPAY_API_K
 I believe this service provides the very basic MVP required by the scenario.
 Not ready for production, but here are some ideas that may be considered in the future:
 
+- Add authentication on the app side, so multiple users can create payments by being authorised to do so. This can be done by using something like Auth0 or Devise.
 - Add VCR into specs so no APIs calls need to be made every time it builds
 - Improve input validation on both the service and the API client
 - Improve management of edge cases and errors on the client (and service)
-- Add authentication on the app side, so multiple users can create payments by being authorised to do so.
 - Add a DB in order to store transactions and provide methods to access those
 - Process payments in background (if Coolpay is slow, or dead temporarily, also the ability to retry)
 - Improve the ways to manage accepted currencies
