@@ -123,3 +123,4 @@ Not ready for production, but here are some ideas that may be considered in the 
 - Provide an OpenAPI (Swagger) specification for the service so other users/systems can have a clear view on how to interact with this service
 - Add integration to an Exception Management service like Sentry.
 - Send custom performance metrics to monitoring.
+- Refactor client file and split to some files.
