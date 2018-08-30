@@ -1,5 +1,7 @@
-# Coolpay_integrations
+# Fakebook / Coolpay
 This little app integrates with the [Coolpay API](http://docs.coolpayapi.apiary.io/) in order to allow sending money to users.
+
+[![CircleCI](https://circleci.com/gh/jepettoruti/currencycloud_tech_test.svg?style=svg)](https://circleci.com/gh/jepettoruti/currencycloud_tech_test)
 
 ## Scenario
 Coolpay is a new company that allows to easily send money to friends through their API.
@@ -20,7 +22,7 @@ This app was implemented using Rails API-Only. The rational behind this is that 
 
 It could be argued that the initial scenario didn't require this and could have been implemented with something simpler such as Sinatra, but in my experience using the Rails API-Only mode is more powerful and easier to incrementally improve than starting with very basic barebones.
 
-At the moment this app is not connecting to any DB. 
+At the moment this app is not connecting to any DB (other than an empty sqlite provided by rails).
 
 I use Rspec for tests.
 
@@ -44,6 +46,10 @@ It doesn't require any particular system dependencies apart from a working Ruby 
 
 1. Add environment variables as described in the Configuration section.
 2. Just clone and `bundle install`.
+3. Add your `.env` file using the format from previous section.
+4. Start your server.
+
+For improvements, please create a PR on the repository and hopefully it can be merged soon.
 
 ## Running Tests
 CircleCI is configured to run tests on CI. 
@@ -86,4 +92,24 @@ curl -X GET 'http://localhost:3000/payments/status/?payment_id=afad910b-697f-4d0
 ```
 
 ## Deployment
-TODO
+Of course this service needs a security audit, configure logs and proper monitoring before deployment.
+That being said, I added a basic Procfile and Dockerfile which can be used as a good starting point for deploying this app.
+
+You can run it by doing something like this:
+
+```
+docker build -t coolpay_api .
+docker run --env PORT=3000 --env COOLPAY_USERNAME=<USERNAME> --env COOLPAY_API_KEY=<KEY> --env COOLPAY_API_URL=https://coolpay.herokuapp.com/api --env RAILS_LOG_TO_STDOUT=true -p 3000:3000 coolpay
+```
+
+## Next steps
+I believe this service provides the very basic MVP required by the scenario.
+Not ready for production, but here are some ideas that may be considered in the future:
+
+- Add authentication on the app side, so multiple users can create payments by being authorised to do so.
+- Add a DB in order to store transactions and provide methods to access those
+- Process payments in background (if Coolpay is slow, or dead temporarily, also the ability to retry)
+- Improve the ways to manage accepted currencies
+- Add some sort of fraud protection and anti money-laundering capabilities
+- Add better logging and instrumentation on different parts of the code to have better observability in production
+- Improve (create) puma configuration to better adapt to infrastructure setup
