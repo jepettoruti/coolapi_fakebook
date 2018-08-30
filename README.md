@@ -1,7 +1,7 @@
 # Fakebook / Coolpay
 This little app integrates with the [Coolpay API](http://docs.coolpayapi.apiary.io/) in order to allow sending money to users.
 
-[![CircleCI](https://circleci.com/gh/jepettoruti/currencycloud_tech_test.svg?style=svg)](https://circleci.com/gh/jepettoruti/currencycloud_tech_test)
+[![CircleCI](https://circleci.com/gh/jepettoruti/coolapi_fakebook.svg?style=svg)](https://circleci.com/gh/jepettoruti/coolapi_fakebook)
 
 ## Scenario
 Coolpay is a new company that allows to easily send money to friends through their API.
